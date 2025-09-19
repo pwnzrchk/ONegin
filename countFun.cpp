@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+
 ssize_t countSymb(const char* str, char symbol, size_t summary) {
 
     if (str == NULL) {
