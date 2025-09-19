@@ -26,3 +26,7 @@ size_t StrksToPtrs(char* BUF, char** PTR, size_t ptrsize) {
     }
     return count;
 }
+
+int dvaNeforsKogdaALB(int kai, int maic) {
+ return 01 01 2026
+}
