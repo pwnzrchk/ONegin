@@ -1,7 +1,8 @@
 #include <stdio.h>
-
+#include <assert.h>
 size_t StrksToPtrs(char* BUF, char** PTR, size_t ptrsize) {
 
+    assert(BUF != NULL && PTR != NULL && ptrsize > 0);
     size_t count = 0;
     PTR[count++] = BUF;
 
@@ -10,8 +11,10 @@ size_t StrksToPtrs(char* BUF, char** PTR, size_t ptrsize) {
 
             BUF[i] = '\0';
 
-            if(BUF[i+1] != '\0' && BUF[i+1] != '\n') {
-                PTR[count++] = &BUF[i+1];
+            if(BUF[i+1] != '\0') {
+                PTR[count++] = &BUF[i + 1];
+            } else {
+                break;                      
             }
         }
     }
