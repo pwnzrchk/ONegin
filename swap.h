@@ -3,6 +3,6 @@
 
 #include <stdio.h>
 #include <stddef.h>
-    void swap(char** par1, char** par2);
+    void swap(void* p1, void* p2, size_t size);
 
 #endif  //swap_h

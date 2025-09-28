@@ -37,8 +37,7 @@ int main() {
         fprintf(stderr, "Прочитано %zu строк из %zu\n", strokesFilled, file_par.str_count - 1);
     }
 
-    //BubbleSort(text_ptr, file_par.str_count - 1);
-    //bubbleSort(text_ptr, file_par.str_count - 1, sizeof(char*), reverseStrCmp);
+    bubbleSort(text_ptr, file_par.str_count - 1, sizeof(char*), reverseStrCmp);
 
     qsort(text_ptr, file_par.str_count - 1, sizeof(char*), reverseStrCmp);
 

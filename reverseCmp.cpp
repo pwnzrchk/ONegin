@@ -4,7 +4,7 @@
 #include "reverseCmp.h"
 
 int letterCmp(char par1, char par2) {
-    return (int)par1 - (int)par2;
+    return (int)(par1 - par2);
 }
 
 int reverseStrCmp(const void* s1, const void* s2) {
@@ -22,8 +22,9 @@ int reverseStrCmp(const void* s1, const void* s2) {
     size_t size1 = strlen(str1);
     size_t size2 = strlen(str2);
 
-    if (size1 == 0 || size2 == 0)
-    return (int)(size1 >= size2 ? size1 : size2);
+    if (size1 == 0 && size2 == 0) return 0;
+    if (size1 == 0) return -1;
+    if (size2 == 0) return 1;
 
     size_t i = 1;
     while (letterCmp(str1[size1 - i], str2[size2 - i]) == 0) {
